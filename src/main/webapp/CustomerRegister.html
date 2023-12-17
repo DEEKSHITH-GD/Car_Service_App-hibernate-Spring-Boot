@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Please key in your details....</h2>
+	<form action="CustomerRegister" method="post">
+		<label>Owner Name</label>
+		<input type="text" name="ownerName"/><br><br>
+		<div th:if="${#fields.hasErrors('ownerName')}" th:errors="*{ownerName}"></div>
+		
+		<label>Password</label>
+		<input type="password" name="password"/><br><br>
+		<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+		
+		<label>vehicle RegNo</label>
+		<input type="text" name="vehicleRegNo"/><br><br>
+		<div th:if="${#fields.hasErrors('vehicleRegNo')}" th:errors="*{vehicleRegNo}"></div>
+		
+		<label>Address</label>
+		<input type="text" name="address"/><br><br>
+		<div th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></div>
+		
+		<label>phoneNo</label>
+		<input type="text" name="phoneNo"/><br><br>
+		<div th:if="${#fields.hasErrors('phoneNo')}" th:errors="*{phoneNo}"></div>
+		
+		<label>Email</label>
+		<input type="text" name="email"/><br><br>
+		<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+		
+		<input type="submit"/>
+		
+	</form>
+
+</body>
+</html>
